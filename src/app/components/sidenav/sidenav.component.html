@@ -2,9 +2,9 @@
   <mat-drawer #drawer mode="over" class="drawer">
     <app-drawer-list></app-drawer-list>
   </mat-drawer>
-  <mat-drawer-content>
+  <mat-drawer-content class="drawer_content-container">
     <ng-container [ngSwitch]="selectedItemService.getSelectedItem()">
-      <app-dialogs *ngSwitchCase="'Dialog'"></app-dialogs>
+      <app-dialogs-list *ngSwitchCase="'Dialog'"></app-dialogs-list>
       <div *ngSwitchDefault>
         Main content
       </div>

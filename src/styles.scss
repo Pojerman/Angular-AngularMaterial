@@ -10,6 +10,10 @@
   @include mat.all-component-colors($dark-theme);
 }
 
+:root {
+  --padding-container: 16px;
+}
+
 html, body {
   height: 100%;
 }
@@ -23,4 +27,8 @@ app-root {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.cdk-global-overlay-wrapper {
+  justify-content: center !important;
 }

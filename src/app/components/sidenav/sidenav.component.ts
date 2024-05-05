@@ -4,7 +4,7 @@ import {Subscription} from "rxjs";
 import {SidenavToggleService} from "../../services/sidenav-toggle/sidenav-toggle.service";
 import {DrawerListComponent} from "../drawer-list/drawer-list.component";
 import {NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
-import {DialogsComponent} from "../dialogs/dialogs.component";
+import {DialogsListComponent} from "../dialogs-list/dialogs-list.component";
 import {SelectedItemService} from "../../services/selected-item/selected-item.service";
 
 @Component({
@@ -16,7 +16,7 @@ import {SelectedItemService} from "../../services/selected-item/selected-item.se
     MatSidenavModule,
     DrawerListComponent,
     NgSwitch,
-    DialogsComponent,
+    DialogsListComponent,
     NgSwitchCase,
     NgSwitchDefault
   ]
