@@ -1,10 +1,10 @@
-<mat-toolbar class="page-toolbar">
+<mat-toolbar class="page-toolbar" color="primary">
   <button mat-icon-button (click)="toggleSidenav()">
     <mat-icon>menu</mat-icon>
   </button>
   <span>My App</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button>
+  <button mat-icon-button matTooltip="Change theme" (click)="toggleTheme()">
     <mat-icon>mode_night</mat-icon>
   </button>
 </mat-toolbar>

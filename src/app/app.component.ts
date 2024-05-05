@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {ToolbarComponent} from "./components/toolbar/toolbar.component";
 import {SidenavComponent} from "./components/sidenav/sidenav.component";
@@ -10,6 +10,4 @@ import {SidenavComponent} from "./components/sidenav/sidenav.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'angular-material';
-}
+export class AppComponent {}
