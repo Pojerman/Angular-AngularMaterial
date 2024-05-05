@@ -1,6 +1,13 @@
 <mat-drawer-container class="page-content" hasBackdrop="true">
-  <mat-drawer #drawer mode="over">Sidenav content</mat-drawer>
+  <mat-drawer #drawer mode="over" class="drawer">
+    <app-drawer-list></app-drawer-list>
+  </mat-drawer>
   <mat-drawer-content>
-    Main content
+    <ng-container [ngSwitch]="selectedItemService.getSelectedItem()">
+      <app-dialogs *ngSwitchCase="'Dialog'"></app-dialogs>
+      <div *ngSwitchDefault>
+        Main content
+      </div>
+    </ng-container>
   </mat-drawer-content>
 </mat-drawer-container>
