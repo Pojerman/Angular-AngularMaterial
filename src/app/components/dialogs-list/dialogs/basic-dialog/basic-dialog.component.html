@@ -1,5 +1,14 @@
 <h2 mat-dialog-title>Dialog with elements</h2>
-<mat-dialog-content>This dialog showcases the title, close, content and actions elements.</mat-dialog-content>
+<mat-dialog-content class="dialog-content">
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <mat-label>First name</mat-label>
+    <input matInput placeholder="First name">
+  </mat-form-field>
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <mat-label>Last name</mat-label>
+    <input matInput placeholder="Last name">
+  </mat-form-field>
+</mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Close</button>
 </mat-dialog-actions>
