@@ -1,25 +1,40 @@
 import { Component } from '@angular/core';
 import {
-  MatDialog,
   MatDialogActions,
   MatDialogClose,
-  MatDialogContent,
+  MatDialogContent, MatDialogRef,
   MatDialogTitle,
 } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {NgIf} from "@angular/common";
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {profileForm} from "../../../../services/interfaces/dialogs";
 
 @Component({
   selector: 'app-basic-dialog',
   standalone: true,
-  imports: [MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule],
+  imports: [MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, MatDividerModule, MatSlideToggleModule, NgIf, FormsModule, ReactiveFormsModule],
   templateUrl: './basic-dialog.component.html',
   styleUrl: './basic-dialog.component.scss'
 })
 export class BasicDialogComponent {
-  constructor(public dialog: MatDialog) {
+  disabled: boolean = false;
+
+  constructor(public dialogRef: MatDialogRef<BasicDialogComponent>) {
   }
 
+  profileForm = new FormGroup(<profileForm>{
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
+  })
+
+  onSave() {
+    console.log(this.profileForm.value);
+    this.dialogRef.close();
+  }
 }
