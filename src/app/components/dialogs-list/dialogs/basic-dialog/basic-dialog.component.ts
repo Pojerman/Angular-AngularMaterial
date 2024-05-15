@@ -8,7 +8,7 @@ import {
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
-import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatFormFieldAppearance, MatFormFieldModule} from "@angular/material/form-field";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {NgIf} from "@angular/common";
@@ -23,7 +23,8 @@ import {profileForm} from "../../../../services/interfaces/dialogs";
   styleUrl: './basic-dialog.component.scss'
 })
 export class BasicDialogComponent {
-  disabled: boolean = false;
+  isDisabledDivider: boolean = false;
+  selectedAppearance: MatFormFieldAppearance = 'outline';
 
   constructor(public dialogRef: MatDialogRef<BasicDialogComponent>) {
   }
@@ -32,6 +33,10 @@ export class BasicDialogComponent {
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
   })
+
+  updateAppearance(value: boolean) {
+    this.selectedAppearance = value ? 'fill' : 'outline';
+  }
 
   onSave() {
     console.log(this.profileForm.value);
