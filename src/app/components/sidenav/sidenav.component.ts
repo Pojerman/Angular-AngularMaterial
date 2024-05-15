@@ -27,7 +27,7 @@ export class SidenavComponent implements OnInit {
 
   constructor(
     private sidenavToggleService: SidenavToggleService,
-    protected selectedItemService: SelectedItemService,
+    protected selectedItemService: SelectedItemService
   ) {}
 
   ngOnInit() {

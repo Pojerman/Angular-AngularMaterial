@@ -13,7 +13,7 @@ export class ThemeService {
   constructor() {
     const savedTheme = localStorage.getItem(THEME_KEY);
     this.selectedThemeSubject = new BehaviorSubject<string>(
-      savedTheme || this.getSystemTheme(),
+      savedTheme || this.getSystemTheme()
     );
     this.selectedTheme$ = this.selectedThemeSubject.asObservable();
     this.applyTheme(this.selectedThemeSubject.value);

@@ -16,7 +16,7 @@ import { ThemeService } from '../../services/theme/theme.service';
 export class ToolbarComponent {
   constructor(
     private sidenavToggleService: SidenavToggleService,
-    private themeService: ThemeService,
+    private themeService: ThemeService
   ) {}
 
   toggleSidenav() {

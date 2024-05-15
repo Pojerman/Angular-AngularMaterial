@@ -3,8 +3,7 @@
   role="list"
   (selectionChange)="onSelectionChange()"
   [multiple]="false"
-  hideSingleSelectionIndicator
->
+  hideSingleSelectionIndicator>
   @for (item of listItems; track item) {
     <mat-list-option [value]="item" [selected]="selectionItem === item">{{
       item

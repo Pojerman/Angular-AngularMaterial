@@ -18,7 +18,7 @@ export class DrawerListComponent implements OnInit {
 
   constructor(
     private selectedItemService: SelectedItemService,
-    private sidenavToggleService: SidenavToggleService,
+    private sidenavToggleService: SidenavToggleService
   ) {}
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class DrawerListComponent implements OnInit {
 
   onSelectionChange() {
     this.selectedItemService.setSelectedItem(
-      this.selectionList.selectedOptions.selected[0].value,
+      this.selectionList.selectedOptions.selected[0].value
     );
     this.sidenavToggleService.toggle();
   }
