@@ -4,20 +4,28 @@
   <form [formGroup]="profileForm" class="form-content">
     <mat-form-field [appearance]="selectedAppearance" subscriptSizing="dynamic">
       <mat-label>First name</mat-label>
-      <input matInput formControlName="firstName" placeholder="First name">
+      <input matInput formControlName="firstName" placeholder="First name" />
     </mat-form-field>
     <mat-form-field [appearance]="selectedAppearance" subscriptSizing="dynamic">
       <mat-label>Last name</mat-label>
-      <input matInput formControlName="lastName" placeholder="Last name">
+      <input matInput formControlName="lastName" placeholder="Last name" />
     </mat-form-field>
   </form>
   <div class="toggle-group">
     <mat-slide-toggle [(ngModel)]="isDisabledDivider">Divider</mat-slide-toggle>
-    <mat-slide-toggle (change)="updateAppearance($event.checked)">Appearance</mat-slide-toggle>
+    <mat-slide-toggle (change)="updateAppearance($event.checked)"
+      >Appearance</mat-slide-toggle
+    >
   </div>
-  <p>Answer: {{this.profileForm.value.firstName}}&nbsp;{{this.profileForm.value.lastName}}</p>
+  <p>
+    Answer: {{ this.profileForm.value.firstName }}&nbsp;{{
+      this.profileForm.value.lastName
+    }}
+  </p>
 </mat-dialog-content>
-<mat-dialog-actions align="end" >
-  <button mat-button (click)="onSave()" [disabled]="profileForm.invalid">Save</button>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onSave()" [disabled]="profileForm.invalid">
+    Save
+  </button>
   <button mat-button mat-dialog-close>Close</button>
 </mat-dialog-actions>

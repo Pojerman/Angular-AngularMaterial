@@ -1,4 +1,4 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 @include mat.core();
 @import "assets/theme";
 
@@ -16,7 +16,8 @@
   --gap: 16px;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 

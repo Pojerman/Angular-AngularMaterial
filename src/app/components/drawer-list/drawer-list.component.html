@@ -1,5 +1,13 @@
-<mat-selection-list #drawerList role="list" (selectionChange)="onSelectionChange()" [multiple]="false" hideSingleSelectionIndicator>
+<mat-selection-list
+  #drawerList
+  role="list"
+  (selectionChange)="onSelectionChange()"
+  [multiple]="false"
+  hideSingleSelectionIndicator
+>
   @for (item of listItems; track item) {
-    <mat-list-option [value]="item" [selected]="selectionItem === item">{{item}}</mat-list-option>
+    <mat-list-option [value]="item" [selected]="selectionItem === item">{{
+      item
+    }}</mat-list-option>
   }
 </mat-selection-list>
