@@ -6,7 +6,7 @@
     <ng-container [ngSwitch]="selectedItemService.getSelectedItem()">
       <app-dialogs-list *ngSwitchCase="'Dialog'"></app-dialogs-list>
       <div *ngSwitchDefault>
-        Main content
+        <app-dialogs-list></app-dialogs-list>
       </div>
     </ng-container>
   </mat-drawer-content>
