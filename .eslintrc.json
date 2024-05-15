@@ -4,7 +4,7 @@
     {
       "files": ["*.ts"],
       "extends": [
-        "eslint:recomended",
+        "eslint:recommended",
         "plugin:@typescript-eslint/recomended",
         "plugin:@angular-eslint/recomended",
         "plugin:@angular-eslint/template/process-inline-templates",
