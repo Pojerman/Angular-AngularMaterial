@@ -35,3 +35,11 @@ app-root {
 .cdk-global-overlay-wrapper {
   justify-content: center !important;
 }
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: var(--padding-dialog-content) !important;
+}

@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { BasicDialogComponent } from './dialogs/basic-dialog/basic-dialog.component';
+import { TemplateDialogComponent } from './dialogs/template-dialog/template-dialog.component';
 
 @Component({
   selector: 'app-dialogs-list',
@@ -18,6 +19,13 @@ export class DialogsListComponent {
 
   openBasicDialog() {
     this.dialog.open(BasicDialogComponent, {
+      width: '100%',
+      autoFocus: 'dialog',
+    });
+  }
+
+  openTemplateDialog() {
+    this.dialog.open(TemplateDialogComponent, {
       width: '100%',
       autoFocus: 'dialog',
     });
