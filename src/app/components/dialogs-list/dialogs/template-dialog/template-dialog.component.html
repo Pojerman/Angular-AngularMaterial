@@ -1,21 +1,41 @@
-<h2 mat-dialog-title>Dialog with elements</h2>
+<h2 mat-dialog-title>Dialog with ng-template</h2>
 <mat-divider></mat-divider>
 <mat-dialog-content class="dialog-content">
-  <form [formGroup]="profileForm" class="form-content">
-    <mat-form-field appearance="outline" subscriptSizing="dynamic">
-      <mat-label>First name</mat-label>
-      <input matInput formControlName="firstName" placeholder="First name" />
-    </mat-form-field>
-    <mat-form-field appearance="outline" subscriptSizing="dynamic">
-      <mat-label>Last name</mat-label>
-      <input matInput formControlName="lastName" placeholder="Last name" />
-    </mat-form-field>
-  </form>
-  <p>
-    Answer: {{ this.profileForm.value.firstName }}&nbsp;{{
-      this.profileForm.value.lastName
-    }}
-  </p>
+  <mat-slide-toggle [(ngModel)]="isChecked"></mat-slide-toggle>
+  @if (isChecked) {
+    <mat-tab-group>
+      <mat-tab label="Content 1">
+        <ng-container *ngTemplateOutlet="formTemplate"></ng-container>
+      </mat-tab>
+      <mat-tab label="Content 2">
+        <form class="form-content">
+          <mat-form-field appearance="outline" subscriptSizing="dynamic">
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Address" />
+          </mat-form-field>
+          <mat-form-field appearance="outline" subscriptSizing="dynamic">
+            <mat-label>Phone number</mat-label>
+            <input matInput placeholder="Phone number" />
+          </mat-form-field>
+        </form>
+      </mat-tab>
+    </mat-tab-group>
+  } @else {
+    <ng-container *ngTemplateOutlet="formTemplate"></ng-container>
+  }
+
+  <ng-template #formTemplate>
+    <form [formGroup]="profileForm" class="form-content">
+      <mat-form-field appearance="outline" subscriptSizing="dynamic">
+        <mat-label>First name</mat-label>
+        <input matInput formControlName="firstName" placeholder="First name" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" subscriptSizing="dynamic">
+        <mat-label>Last name</mat-label>
+        <input matInput formControlName="lastName" placeholder="Last name" />
+      </mat-form-field>
+    </form>
+  </ng-template>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button (click)="onSave()" [disabled]="profileForm.invalid">

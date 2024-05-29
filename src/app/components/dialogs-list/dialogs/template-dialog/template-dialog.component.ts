@@ -11,14 +11,16 @@ import { MatDivider } from '@angular/material/divider';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
-import { NgIf } from '@angular/common';
+import { NgIf, NgTemplateOutlet } from '@angular/common';
 import {
   FormControl,
   FormGroup,
+  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
 import { profileForm } from '../../../../services/interfaces/dialogs';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-template-dialog',
@@ -36,11 +38,16 @@ import { profileForm } from '../../../../services/interfaces/dialogs';
     MatSlideToggle,
     NgIf,
     ReactiveFormsModule,
+    MatTabsModule,
+    FormsModule,
+    NgTemplateOutlet,
   ],
   templateUrl: './template-dialog.component.html',
   styleUrl: './template-dialog.component.scss',
 })
 export class TemplateDialogComponent {
+  isChecked = true;
+
   constructor(public dialogRef: MatDialogRef<TemplateDialogComponent>) {}
 
   profileForm = new FormGroup(<profileForm>{
