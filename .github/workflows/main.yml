@@ -24,7 +24,10 @@ jobs:
     - name: Install Angular CLI
       run: npm install -g @angular/cli
 
+    - name: Build Angular project
+      run: ng build --configuration=production --base-href=/Angular-AngularMaterial/
+
     - name: Deploy to GitHub Pages
       env:
-        PERSONAL_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
       run: ng deploy --base-href=/Angular-AngularMaterial/
