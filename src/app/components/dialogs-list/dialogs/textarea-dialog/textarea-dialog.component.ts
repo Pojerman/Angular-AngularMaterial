@@ -43,6 +43,9 @@ export class TextareaDialogComponent {
   profileForm = new FormGroup(<profileForm>{
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
+    about: new FormControl('', Validators.required),
+    phone: new FormControl('', Validators.required),
+    description: new FormControl('', Validators.required),
   });
 
   onSave() {
