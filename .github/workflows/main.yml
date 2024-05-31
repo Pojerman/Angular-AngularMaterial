@@ -27,5 +27,4 @@ jobs:
     - name: Deploy to GitHub Pages
       env:
         PERSONAL_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-      run:
-        run: ng deploy --base-href=/Angular-AngularMaterial/
+      run: ng deploy --base-href=/Angular-AngularMaterial/
