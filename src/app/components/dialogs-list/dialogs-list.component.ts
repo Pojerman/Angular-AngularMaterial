@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { BasicDialogComponent } from './dialogs/basic-dialog/basic-dialog.component';
 import { TemplateDialogComponent } from './dialogs/template-dialog/template-dialog.component';
+import { TextareaDialogComponent } from './dialogs/textarea-dialog/textarea-dialog.component';
 
 @Component({
   selector: 'app-dialogs-list',
@@ -26,6 +27,13 @@ export class DialogsListComponent {
 
   openTemplateDialog() {
     this.dialog.open(TemplateDialogComponent, {
+      width: '100%',
+      autoFocus: 'dialog',
+    });
+  }
+
+  openTextAreaDialog() {
+    this.dialog.open(TextareaDialogComponent, {
       width: '100%',
       autoFocus: 'dialog',
     });
