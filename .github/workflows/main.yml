@@ -21,6 +21,15 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+
+    - name: Build Angular project
+      run: ng build --prod --base-href=/Angular-AngularMaterial/
+
+    - name: List build directory contents
+      run: ls -la dist/angular-material
+
     - name: Deploy to GitHub Pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
