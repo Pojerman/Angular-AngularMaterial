@@ -26,8 +26,6 @@ jobs:
 
     - name: Deploy to GitHub Pages
       env:
-        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-      run: |
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-        npx angular-cli-ghpages --dir=dist/angular-material --repo=https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      run:
+        run: ng deploy --base-href=/Angular-AngularMaterial/
