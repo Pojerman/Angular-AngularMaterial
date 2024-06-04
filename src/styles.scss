@@ -43,3 +43,7 @@ app-root {
   gap: 16px;
   padding: var(--padding-dialog-content) !important;
 }
+
+mat-form-field {
+  width: 100%;
+}
