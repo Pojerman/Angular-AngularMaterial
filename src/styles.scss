@@ -10,10 +10,37 @@
   @include mat.all-component-colors($dark-theme);
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2196f3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1565c0;
+}
+
 :root {
   --padding-container: 16px;
   --padding-dialog-content: 11px 24px 20px;
   --gap: 16px;
+}
+
+html {
+  /* For Firefox */
+  overflow-y: scroll;
+  scrollbar-color: #2196f3 #1565c0;
+  scrollbar-width: thin;
 }
 
 html,
