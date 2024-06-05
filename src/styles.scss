@@ -10,22 +10,20 @@
   @include mat.all-component-colors($dark-theme);
 }
 
-/* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #eee;
+  background: #f0f0f0;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #2196f3;
+  border-radius: 6px;
+  transition: background-color 0.3s;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #1565c0;
 }
