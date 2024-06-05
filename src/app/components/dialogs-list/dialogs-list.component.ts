@@ -7,6 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { BasicDialogComponent } from './dialogs/basic-dialog/basic-dialog.component';
 import { TemplateDialogComponent } from './dialogs/template-dialog/template-dialog.component';
 import { TextareaDialogComponent } from './dialogs/textarea-dialog/textarea-dialog.component';
+import {ScrollDialogComponent} from "./dialogs/scroll-dialog/scroll-dialog.component";
 
 @Component({
   selector: 'app-dialogs-list',
@@ -37,5 +38,12 @@ export class DialogsListComponent {
       width: '100%',
       autoFocus: 'dialog',
     });
+  }
+
+  openScrollDialog() {
+    this.dialog.open(ScrollDialogComponent, {
+      width: '100%',
+      autoFocus: 'dialog',
+    })
   }
 }
