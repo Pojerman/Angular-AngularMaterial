@@ -3,16 +3,24 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogContent } from '@angular/material/dialog';
 import { BasicDialogComponent } from './dialogs/basic-dialog/basic-dialog.component';
 import { TemplateDialogComponent } from './dialogs/template-dialog/template-dialog.component';
 import { TextareaDialogComponent } from './dialogs/textarea-dialog/textarea-dialog.component';
-import {ScrollDialogComponent} from "./dialogs/scroll-dialog/scroll-dialog.component";
+import { ScrollDialogComponent } from './dialogs/scroll-dialog/scroll-dialog.component';
+import { DatepickerComponent } from '../datepicker/datepicker.component';
 
 @Component({
   selector: 'app-dialogs-list',
   standalone: true,
-  imports: [MatGridListModule, MatCardModule, MatButtonModule, MatIconModule],
+  imports: [
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    DatepickerComponent,
+    MatDialogContent,
+  ],
   templateUrl: './dialogs-list.component.html',
   styleUrl: './dialogs-list.component.scss',
 })
@@ -44,6 +52,6 @@ export class DialogsListComponent {
     this.dialog.open(ScrollDialogComponent, {
       width: '100%',
       autoFocus: 'dialog',
-    })
+    });
   }
 }
