@@ -4,10 +4,10 @@
 
 .light {
   @include mat.all-component-themes($light-theme);
-}
+  //@include layout-theme.theme($light-theme);
 
-.dark {
-  @include mat.all-component-colors($dark-theme);
+  @include mat.system-level-colors($light-theme);
+  @include mat.all-component-typographies($light-theme);
 }
 
 ::-webkit-scrollbar {
