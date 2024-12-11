@@ -1,14 +1,4 @@
 @use '@angular/material' as mat;
-@include mat.core();
-@import 'assets/theme';
-
-.light {
-  @include mat.all-component-themes($light-theme);
-}
-
-.dark {
-  @include mat.all-component-colors($dark-theme);
-}
 
 ::-webkit-scrollbar {
   width: 6px;
