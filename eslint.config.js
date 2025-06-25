@@ -7,6 +7,7 @@ const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommen
 module.exports = tseslint.config(
   {
     files: ['**/*.ts'],
+    ignores: ['**/*.spec.ts'],
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
@@ -35,12 +36,12 @@ module.exports = tseslint.config(
   },
   {
     files: ['**/*.html'],
+    ignores: ['*inline-template-*.component.html'],
     extends: [
       ...angular.configs.templateRecommended,
       ...angular.configs.templateAccessibility,
       eslintPluginPrettierRecommended,
     ],
-    ignores: ['*inline-template-*.component.html'],
     rules: {
       '@angular-eslint/template/click-events-have-key-events': 'warn',
       '@angular-eslint/template/interactive-supports-focus': 'warn',
@@ -52,5 +53,8 @@ module.exports = tseslint.config(
         },
       ],
     },
+  },
+  {
+    ignores: ['node_modules', 'dist'],
   }
 );
