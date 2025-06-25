@@ -28,7 +28,8 @@
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/angular-material"
           },
           "configurations": {
             "production": {
@@ -85,9 +86,6 @@
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
