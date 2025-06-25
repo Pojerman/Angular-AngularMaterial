@@ -28,11 +28,11 @@
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "baseHref": "/Angular-AngularMaterial"
+            "scripts": []
           },
           "configurations": {
             "production": {
+              "outputHashing": "all",
               "budgets": [
                 {
                   "type": "initial",
@@ -44,13 +44,16 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
-              ],
-              "outputHashing": "all"
+              ]
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "github-pages": {
+              "baseHref": "/Angular-AngularMaterial/",
+              "outputHashing": "all"
             }
           },
           "defaultConfiguration": "production"
@@ -63,6 +66,9 @@
             },
             "development": {
               "buildTarget": "angular-material:build:development"
+            },
+            "github-pages": {
+              "buildTarget": "angular-material:build:github-pages"
             }
           },
           "defaultConfiguration": "development"
