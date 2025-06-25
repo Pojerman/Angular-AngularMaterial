@@ -4,10 +4,9 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
+    selector: 'app-root',
   imports: [RouterOutlet, ToolbarComponent, SidenavComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {}
