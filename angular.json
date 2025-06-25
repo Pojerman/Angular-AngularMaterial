@@ -29,7 +29,7 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "baseHref": "/angular-material"
+            "baseHref": "/Angular-AngularMaterial"
           },
           "configurations": {
             "production": {
